@@ -9,8 +9,6 @@ const CurrencyList: FC = () => {
     (state) => state.currency
   );
 
-  //   console.log(currencies);
-
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -28,11 +26,14 @@ const CurrencyList: FC = () => {
       <caption>
         <h1>Курс валют</h1>
       </caption>
-      <tbody>
+      <thead>
         <tr>
           <th>Код валюты</th>
           <th>Наименование валюты</th>
         </tr>
+      </thead>
+
+      <tbody>
         {currencies.map((cur) => (
           <tr key={cur.ID} className="list">
             <td className="code">{`${cur.NumCode}`}</td>
@@ -45,4 +46,3 @@ const CurrencyList: FC = () => {
 };
 
 export default CurrencyList;
-//{`${cur.NumCode}  - ${cur.Name} `}
