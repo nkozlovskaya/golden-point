@@ -21,6 +21,15 @@ const CurrencyList: FC = () => {
 
   if (error) return <h1>{error}</h1>;
 
+  const persents = (a: number, b: number): string => {
+    let x = ((a * 100) / b);
+    if (x > 100) return `+${(x - 100).toFixed(2)}%`;
+    if (x < 100) return `-${(100 - x).toFixed(2)}%`;
+    return `0%`;
+  };
+
+  console.log(persents(5, 10));
+
   return (
     <table className="table">
       <caption>
@@ -30,14 +39,16 @@ const CurrencyList: FC = () => {
         <tr>
           <th>Код валюты</th>
           <th>Наименование валюты</th>
+          <th>Отличие курса в %</th>
         </tr>
       </thead>
 
       <tbody>
         {currencies.map((cur) => (
           <tr key={cur.ID} className="list">
-            <td className="code">{`${cur.NumCode}`}</td>
-            <td className="name">{`${cur.Name}`}</td>
+            <td className="code">{`${cur.CharCode}`}</td>
+            <td className="name">{`${cur.Value.toFixed(2)}`}</td>
+            <td className="name">{persents(cur.Value, cur.Previous)}</td>
           </tr>
         ))}
       </tbody>
