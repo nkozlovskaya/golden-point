@@ -1,4 +1,7 @@
 import { FC, useEffect } from "react";
+import Tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css";
+import "tippy.js/themes/light.css";
 import { useDispatch } from "react-redux";
 import { useTypedSelector } from "../hooks/useTypedSelector";
 import { fetchCurrencies } from "../store/action_creators/currency";
@@ -22,7 +25,7 @@ const CurrencyList: FC = () => {
   if (error) return <h1>{error}</h1>;
 
   const persents = (a: number, b: number): string => {
-    let x = ((a * 100) / b);
+    let x = (a * 100) / b;
     if (x > 100) return `+${(x - 100).toFixed(2)}%`;
     if (x < 100) return `-${(100 - x).toFixed(2)}%`;
     return `0%`;
@@ -38,17 +41,26 @@ const CurrencyList: FC = () => {
       <thead>
         <tr>
           <th>Код валюты</th>
-          <th>Наименование валюты</th>
-          <th>Отличие курса в %</th>
+          <th>Значение в рублях</th>
+          <th>разница в % в сравнении с предыдущим днем</th>
         </tr>
       </thead>
 
       <tbody>
         {currencies.map((cur) => (
           <tr key={cur.ID} className="list">
-            <td className="code">{`${cur.CharCode}`}</td>
-            <td className="name">{`${cur.Value.toFixed(2)}`}</td>
-            <td className="name">{persents(cur.Value, cur.Previous)}</td>
+            <Tippy
+              theme={"light"}
+              content={
+                <div>
+                  <h3>{cur.Name}</h3>
+                </div>
+              }
+            >
+              <td>{`${cur.CharCode}`}</td>
+            </Tippy>
+            <td>{`${cur.Value.toFixed(2)}`}</td>
+            <td>{persents(cur.Value, cur.Previous)}</td>
           </tr>
         ))}
       </tbody>
