@@ -1,5 +1,16 @@
+export interface ICurrency {
+  ID: string;
+  NumCode: string;
+  CharCode: string;
+  Nominal: number;
+  Name: string;
+  Value: number;
+  Previous: number;
+  // children?: React.ReactChild | React.ReactNode;
+}
+
 export interface CurrencyState {
-  currencies: any[];
+  currencies: ICurrency[];
   loading: boolean;
   error: null | string;
 }

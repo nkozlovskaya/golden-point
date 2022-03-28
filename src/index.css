@@ -12,23 +12,6 @@ code {
     monospace;
 }
 
-/* .code {
-  margin: 0 20px;
-}
-table {
-  width: 1000px;
-  border: 1px solid grey;
-}
-td{
-
-} */
-/* thead {
-  border: 1px solid grey;
-} */
-/* td {
-  border: 1px solid grey;
-} */
-
 table {
   margin: auto;
   font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
@@ -38,7 +21,7 @@ table {
   text-align: center;
 }
 th {
-  background: #bcebdd;
+  background: #6ce6c1;
   /*color: white;
   text-shadow: 0 1px 1px #2d2020; */
   padding: 10px 20px;
@@ -49,10 +32,13 @@ td {
   border-width: 0 1px 1px 0;
   border-color: white;
 }
-th:first-child,
-td:first-child {
-  text-align: center;
+tr {
+  min-width: 700px;
 }
+td:first-child:hover {
+  background: rgb(0, 255, 98);
+}
+
 th:first-child {
   border-top-left-radius: 10px;
 }
@@ -62,14 +48,14 @@ th:last-child {
 }
 td {
   padding: 10px 20px;
-  background: #aadcf3;
+  background: #a5e5f5;
 }
-tr:last-child td:first-child {
+/* tr:last-child td:first-child {
   border-radius: 0 0 0 10px;
-}
+} 
 tr:last-child td:last-child {
   border-radius: 0 0 10px 0;
-}
+}*/
 tr td:last-child {
   border-right: none;
 }
