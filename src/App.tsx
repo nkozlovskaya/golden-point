@@ -11,15 +11,12 @@ function App() {
     (state) => state.currency
   );
   const { fetchCurrencies } = useActions();
-  // const charCode = currencies.map((currency) => currency.CharCode);
   useEffect(() => {
     fetchCurrencies();
     // eslint-disable-next-line
   }, []);
 
-  
-
-  if (loading) return <h1>Идет загрузка...</h1>;
+  if (loading) return <div className="fetching"></div>;
 
   if (error) return <h1>{error}</h1>;
 
@@ -34,4 +31,3 @@ function App() {
 }
 
 export default App;
-

@@ -12,7 +12,8 @@ code {
     monospace;
 }
 
-table {
+table,
+.table-valute {
   margin: auto;
   font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
   font-size: 14px;
@@ -48,14 +49,51 @@ th:last-child {
 }
 td {
   padding: 10px 20px;
-  background: #a5e5f5;
+  background: #bcebf7;
 }
-/* tr:last-child td:first-child {
-  border-radius: 0 0 0 10px;
-} 
-tr:last-child td:last-child {
-  border-radius: 0 0 10px 0;
-}*/
+
 tr td:last-child {
   border-right: none;
+}
+
+.card {
+  margin: 100px auto;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-valute {
+  min-width: 500px;
+}
+
+.back-btn {
+  margin-top: 15px;
+  width: 120px;
+  height: 40px;
+  background-color: #84c7ee;
+}
+
+.fetching {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  margin: 30vh auto;
+  border: 2px dashed rgb(0, 119, 255);
+  animation-name: search-fetching;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes search-fetching {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.3);
+  }
 }

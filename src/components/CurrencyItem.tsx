@@ -15,8 +15,9 @@ const CurrencyItem: FC<CurrencyItemProps> = ({ currency }) => {
 
   const persents = (a: number, b: number): string => {
     let x = (a * 100) / b;
-    if (x > 100) return `▲ ${(x - 100).toFixed(2)}%`;
-    if (x < 100) return `▼ ${(100 - x).toFixed(2)}%`;
+
+    if (x > 100) return `+ ${(x - 100).toFixed(2)}%`;
+    if (x < 100) return `- ${(100 - x).toFixed(2)}%`;
     return `0%`;
   };
 
