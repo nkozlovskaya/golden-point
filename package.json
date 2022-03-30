@@ -1,6 +1,6 @@
 {
   "name": "golden_point",
-  "homepage": "https://nkozlovskaya.github.io/golden_point",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
