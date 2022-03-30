@@ -2,7 +2,7 @@ import {
   CurrencyAction,
   CurrencyActionTypes,
   CurrencyState,
-} from "../../types/currency";
+} from "../../types/currencyTypes";
 
 const initialState: CurrencyState = {
   currencies: [],

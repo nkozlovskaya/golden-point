@@ -1,35 +1,37 @@
 import { useEffect } from "react";
 import CurrencyList from "./components/ CurrencyList";
 import "./App.css";
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import CurrencyItem from "./components/CurrencyItem";
-import { useDispatch } from "react-redux";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useTypedSelector } from "./hooks/useTypedSelector";
-import { fetchCurrencies } from "./store/action_creators/currency";
+import { useActions } from "./hooks/useActions";
+import Card from "./components/Card";
 
 function App() {
   const { currencies, loading, error } = useTypedSelector(
     (state) => state.currency
   );
-  // const { currency } = currencies;
-
-  const dispatch = useDispatch();
-
+  const { fetchCurrencies } = useActions();
+  // const charCode = currencies.map((currency) => currency.CharCode);
   useEffect(() => {
-    dispatch(fetchCurrencies());
-
+    fetchCurrencies();
     // eslint-disable-next-line
   }, []);
+
+  
 
   if (loading) return <h1>Идет загрузка...</h1>;
 
   if (error) return <h1>{error}</h1>;
 
   return (
-    <div>
-      <CurrencyList currencies={currencies} />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<CurrencyList currencies={currencies} />} />
+        <Route path="/card/:CharCode" element={<Card />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
 export default App;
+

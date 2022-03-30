@@ -1,6 +1,7 @@
 import { FC } from "react";
+
 import CurrencyItem from "./CurrencyItem";
-import { ICurrency } from "../types/currency";
+import { ICurrency } from "../types/currencyTypes";
 
 interface CurrencyListProps {
   currencies: ICurrency[];

@@ -1,6 +1,6 @@
 import axios from "axios";
 import { Dispatch } from "react";
-import { CurrencyAction, CurrencyActionTypes } from "./../../types/currency";
+import { CurrencyAction, CurrencyActionTypes } from "../../types/currencyTypes";
 
 export const fetchCurrencies = () => {
   return async (dispatch: Dispatch<CurrencyAction>) => {

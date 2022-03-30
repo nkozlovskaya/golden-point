@@ -1,8 +1,10 @@
 import { FC } from "react";
+
+import { NavLink } from "react-router-dom";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import "tippy.js/themes/light.css";
-import { ICurrency } from "../types/currency";
+import { ICurrency } from "../types/currencyTypes";
 
 interface CurrencyItemProps {
   currency: ICurrency;
@@ -28,8 +30,11 @@ const CurrencyItem: FC<CurrencyItemProps> = ({ currency }) => {
           </div>
         }
       >
-        <td>{`${CharCode}`}</td>
+        <td>
+          <NavLink to={`/card/${CharCode}`}>{`${CharCode}`}</NavLink>
+        </td>
       </Tippy>
+
       <td>{`${Value.toFixed(2)}`}</td>
       <td>{persents(Value, Previous)}</td>
     </tr>

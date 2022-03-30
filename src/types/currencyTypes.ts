@@ -6,8 +6,8 @@ export interface ICurrency {
   Name: string;
   Value: number;
   Previous: number;
-  // children?: React.ReactChild | React.ReactNode;
 }
+
 
 export interface CurrencyState {
   currencies: ICurrency[];
@@ -27,7 +27,7 @@ interface FetchCurrencyAction {
 
 interface FetchCurrencySuccessAction {
   type: CurrencyActionTypes.FETCH_CURRENCIES_SUCCESS;
-  payload: any[];
+  payload: ICurrency[];
 }
 
 interface FetchCurrencyErrorAction {
