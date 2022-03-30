@@ -9,4 +9,4 @@
 Проект реализован на React, использовался менеджер управления состояний приложения Redux и для типизации применялся TypeScript
 Для всплывающих подсказок использовался плагин Typpyjs
 
-[Demo](https://nkozlovskaya.github.io/golden_point/)
+[Demo](https://nkozlovskaya.github.io/golden_point)
