@@ -1,8 +1,8 @@
 {
   "name": "golden_point",
-  "homepage": "https://nkozlovskaya.github.io/golden_point/",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://nkozlovskaya.github.io/golden_point",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
