@@ -9,6 +9,7 @@
 Проект реализован на React, использовался менеджер управления состояний приложения Redux и для типизации применялся TypeScript
 Для всплывающих подсказок использовался плагин Typpyjs
 
+<img width="731" alt="Снимок экрана 2022-03-30 в 16 47 10" src="https://user-images.githubusercontent.com/64790767/160856628-1ab239da-8ad8-4d2d-9c34-cf6d03a1c098.png">
 
 <img width="690" alt="Снимок экрана 2022-03-30 в 16 47 29" src="https://user-images.githubusercontent.com/64790767/160856579-5e0762f3-7bad-4bf9-898d-bcaea0bc38df.png">
-<img width="731" alt="Снимок экрана 2022-03-30 в 16 47 10" src="https://user-images.githubusercontent.com/64790767/160856628-1ab239da-8ad8-4d2d-9c34-cf6d03a1c098.png">
+
