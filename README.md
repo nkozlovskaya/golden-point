@@ -11,5 +11,5 @@
 
 <img width="761" alt="Снимок экрана 2022-10-31 в 22 01 52" src="https://user-images.githubusercontent.com/64790767/199088924-5c6a3de3-1dfa-48ef-ac91-87c4eb9e221e.png">
 
-<img width="802" alt="Снимок экрана 2022-10-31 в 21 58 28" src="https://user-images.githubusercontent.com/64790767/199088381-42ac442f-082a-4e1d-aedb-8d69ca71dcc9.png">
+<img width="714" alt="Снимок экрана 2022-10-31 в 22 03 17" src="https://user-images.githubusercontent.com/64790767/199089133-29b45925-bc72-4661-9cc8-d2a5825d9f62.png">
 
